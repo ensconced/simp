@@ -22,14 +22,9 @@ function findConfig() {
 
 function getConfig() {
   // TODO - apply defaults to config
-  const configFile = findConfig();
-  if (!configFile) {
-    // TODO - proper logging
-    console.error("simp could not find config");
-    process.exit(1);
-  }
+  const configPath = findConfig();
   // TODO - check for parse warnings/errors - see docs for jsonc-parser
-  return parse(fs.readFileSync(configFile, "utf-8"));
+  return configPath ? parse(fs.readFileSync(configPath, "utf-8")) : {};
 }
 
 module.exports = getConfig;

@@ -7,7 +7,6 @@
     "yargs": "^17.2.1"
   },
   "scripts": {
-    "build": "yarn webpack && chmod +x dist/main.js",
-    "start": "yarn build && ./dist/main.js"
+    "build": "yarn webpack && chmod +x dist/main.js"
   }
 }

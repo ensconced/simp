@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    // omg you can put comments in here...
+    "db": "node main.js build --mode debug foo.c"
+  },
+  "modes": {
+    "debug": {
+      "flags": "-g"
+    }
+  }
+}
