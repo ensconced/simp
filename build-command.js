@@ -10,21 +10,11 @@ const builder = {
   },
 };
 
-function getMode(argv) {
-  if (argv.mode) {
-    const modes = argv.config.modes;
-    if (modes[argv.mode]) {
-      return modes[argv.mode];
-    }
-  }
-  return undefined;
-}
-
 function handler(argv) {
   const { files } = argv;
 
   // TODO - currently we just use the first file...
-  buildFile(files[0], getMode(argv));
+  buildFile(files[0], argv);
 }
 
 module.exports = { command, describe, builder, handler };

@@ -4,8 +4,16 @@
     "db": "node main.js build --mode debug foo.c"
   },
   "modes": {
+    "default": {
+      "flags": "-Wall -Wextra -pedantic"
+    },
+    "prod": {
+      "extends": "default",
+      "flags": "-O3"
+    },
     "debug": {
-      "flags": "-g"
+      "extends": "default",
+      "flags": "-g -glldb"
     }
   }
 }
