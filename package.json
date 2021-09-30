@@ -1,0 +1,13 @@
+{
+  "license": "MIT",
+  "dependencies": {
+    "jsonc-parser": "^3.0.0",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "yargs": "^17.2.1"
+  },
+  "scripts": {
+    "build": "yarn webpack && chmod +x dist/main.js",
+    "start": "yarn build && ./dist/main.js"
+  }
+}
