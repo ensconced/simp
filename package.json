@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "dependencies": {
+    "eslint": "^7.32.0",
     "jsonc-parser": "^3.0.0",
     "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",

@@ -5,11 +5,13 @@
 /***/ 902:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+const fs = __webpack_require__(147);
 const util = __webpack_require__(837);
 const exec = util.promisify(__webpack_require__(81).exec);
 
 async function getHeaderDependencies(fileName) {
-  const { stdout, stderr } = await exec(`clang -MM ${fileName}`);
+  // TODO - handle errors here
+  const { stdout } = await exec(`clang -MM ${fileName}`);
   const lines = stdout.split(/\s/);
   return Promise.all(
     lines
@@ -72,7 +74,6 @@ module.exports = { command, describe, builder, handler };
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 const fs = __webpack_require__(147);
-const path = __webpack_require__(17);
 const util = __webpack_require__(837);
 const exec = util.promisify(__webpack_require__(81).exec);
 
@@ -206,8 +207,6 @@ module.exports = getConfig;
 
 const yargs = __webpack_require__(259);
 const { hideBin } = __webpack_require__(397);
-
-const config = __webpack_require__(855);
 const getConfig = __webpack_require__(855);
 
 function main() {

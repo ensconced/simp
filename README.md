@@ -22,3 +22,4 @@ TODO
 - make-style change detection
 - incremental builds - i.e. make object files and link in separate stage
 - see what else I should steal from make
+- rewrite in C...

@@ -2,8 +2,6 @@
 
 const yargs = require("yargs");
 const { hideBin } = require("yargs/helpers");
-
-const config = require("./get-config");
 const getConfig = require("./get-config");
 
 function main() {

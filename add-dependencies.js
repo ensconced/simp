@@ -1,8 +1,10 @@
+const fs = require("fs");
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
 async function getHeaderDependencies(fileName) {
-  const { stdout, stderr } = await exec(`clang -MM ${fileName}`);
+  // TODO - handle errors here
+  const { stdout } = await exec(`clang -MM ${fileName}`);
   const lines = stdout.split(/\s/);
   return Promise.all(
     lines

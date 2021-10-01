@@ -1,0 +1,12 @@
+{
+  "env": { "node": true, "es6": true },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    // ES2019 is almost fully supported by node v14.18.0 which is what we
+    // specify in .nvmrc
+    "ecmaVersion": 2019
+  },
+  "rules": {
+    "no-constant-condition": "off"
+  }
+}
