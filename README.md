@@ -14,6 +14,7 @@ This will output an executable at ./path/to/some/source/file
 TODO
 
 - tidy up!
+- handle compiler errors properly - currently we output a load a junk...
 - improve usage of yargs to generate help pages and shell completion scripts!
 - better logging
 - consume config file to set up aliases for different build targets
@@ -23,3 +24,5 @@ TODO
 - incremental builds - i.e. make object files and link in separate stage
 - see what else I should steal from make
 - rewrite in C...
+- how to distribute?
+- create manpage
